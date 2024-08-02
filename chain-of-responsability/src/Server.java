@@ -8,7 +8,9 @@ public class Server {
     public void setMiddleware(Middleware middleware){
         this.middleware = middleware;
     }
-
+    /*
+        Servidor recebe as credenciais e envia a requisição de autorização para chain
+    * */
     public Boolean login(String email, String password){
         if(middleware.check(email, password)){
             System.out.println("Autorização bem sucedida");
