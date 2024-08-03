@@ -11,7 +11,7 @@ public class RoleCheckMiddleware extends Middleware{
             System.out.println("Olá Admin");
             return true;
         }
-        System.out.printf("Olá %s%n" + email);
+        System.out.printf("Olá %s%n",email);
         return checkNext(email, password);
     }
 }
