@@ -18,7 +18,7 @@ public abstract class Middleware {
     protected boolean checkNext(String email, String password){
         if(next == null)
             return true;
-        return next.checkNext(email, password);
+        return next.check(email, password);
     }
 
 }
