@@ -1,3 +1,4 @@
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -20,5 +21,11 @@ public class EventManager {
     public void unsubscribe(String eventType, EventListener eventListener){
         List<EventListener> eventListeners = listeners.get(eventType);
         eventListeners.remove(eventListener);
+    }
+    public void notify(String eventType, File file){
+        List<EventListener> eventListeners = listeners.get(eventType);
+        for(EventListener listener : eventListeners){
+            listener.update(eventType, file);
+        }
     }
 }
