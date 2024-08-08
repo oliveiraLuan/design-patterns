@@ -12,6 +12,6 @@ public class EmailNotificationListener implements EventListener{
 
     @Override
     public void update(String eventType, File file) {
-        System.out.println(STR."Email para {email}: Alguém fez a operação de {eventType} com o seguinte arquivo: {file.getName()}");
+        System.out.println(STR."Email para \{email}: Alguém fez a operação de \{ eventType } com o seguinte arquivo: \{ file.getName() }");
     }
 }
