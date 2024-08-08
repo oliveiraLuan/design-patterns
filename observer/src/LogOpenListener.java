@@ -8,6 +8,6 @@ public class LogOpenListener implements EventListener{
     }
     @Override
     public void update(String eventType, File file) {
-        System.out.println(STR."Salvar {log} alguém fez a operação de {eventType} com o seguinte arquivo: {file.getName()}");
+        System.out.println(STR."Salvar \{log} alguém fez a operação de \{eventType} com o seguinte arquivo: \{file.getName()}");
     }
 }
