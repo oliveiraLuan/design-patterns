@@ -1,4 +1,6 @@
-public class Rectangle implements Shape{
+package shapes;
+
+public class Rectangle implements Shape {
     private int id, x, y, z, width, height;
 
     public Rectangle(int id, int x, int y, int z, int width, int height) {

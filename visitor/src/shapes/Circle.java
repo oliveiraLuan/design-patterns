@@ -1,3 +1,5 @@
+package shapes;
+
 public class Circle extends Dot{
     private int radius;
 

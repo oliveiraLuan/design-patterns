@@ -1,4 +1,6 @@
-public class Dot implements Shape{
+package shapes;
+
+public class Dot implements Shape {
     private int id;
     private int x;
     private int y;
