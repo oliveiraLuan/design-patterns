@@ -1,7 +1,4 @@
-import shapes.Circle;
-import shapes.CompoundShape;
-import shapes.Dot;
-import shapes.Rectangle;
+package shapes;
 
 public interface Visitor {
     String visitDot(Dot dot);
