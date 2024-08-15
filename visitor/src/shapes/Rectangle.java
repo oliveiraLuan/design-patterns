@@ -12,6 +12,14 @@ public class Rectangle implements Shape {
         this.height = height;
     }
 
+    public Rectangle(int id, int x, int y, int z, int width) {
+        this.id = id;
+        this.x = x;
+        this.y = y;
+        this.z = z;
+        this.width = width;
+    }
+
     @Override
     public void move(int x, int y) {
 
