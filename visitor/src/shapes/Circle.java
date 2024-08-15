@@ -12,4 +12,8 @@ public class Circle extends Dot{
     public String accept(Visitor visitor) {
         return visitor.visitCircle(this);
     }
+
+    public int getRadius() {
+        return radius;
+    }
 }
