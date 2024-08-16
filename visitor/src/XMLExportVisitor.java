@@ -24,7 +24,7 @@ public class XMLExportVisitor implements Visitor {
 
     @Override
     public String visitCircle(Circle circle) {
-        return STR."<circle> \n <id>\{circle.getId()}</id> \n <x>\{circle.getX()}</x> \n<y>\{circle.getY()}</y>\n<radius>\{circle.getRadius()}</radius>\n</circle>";
+        return STR."<circle> \n <id>\{circle.getId()}</id> \n <x>\{circle.getX()}</x>\n<y>\{circle.getY()}</y>\n<radius>\{circle.getRadius()}</radius>\n</circle>";
     }
 
     @Override
