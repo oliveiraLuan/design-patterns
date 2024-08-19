@@ -57,6 +57,7 @@ public class CompressionDecorator extends DataSourceDecorator{
             in.close();
             inflaterInputStream.close();
             byteArrayOutputStream.close();
+            return new String(byteArrayOutputStream.toByteArray());
         }   catch (IOException e){
             return null;
         }
