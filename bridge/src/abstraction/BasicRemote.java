@@ -5,6 +5,13 @@ import implementation.Device;
 public class BasicRemote implements Remote{
     protected Device device;
 
+    public BasicRemote(Device device) {
+        this.device = device;
+    }
+
+    public BasicRemote() {
+    }
+
     @Override
     public void power() {
         System.out.println("Remote: Acionado botão ligar");
