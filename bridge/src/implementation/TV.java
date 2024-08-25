@@ -5,6 +5,12 @@ public class TV implements Device{
     private int volume;
     private int channel;
 
+    public TV(Boolean on, int volume, int channel) {
+        this.on = on;
+        this.volume = volume;
+        this.channel = channel;
+    }
+
     @Override
     public boolean isEnabled() {
         return on;

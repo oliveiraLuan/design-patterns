@@ -7,6 +7,12 @@ public class Radio implements Device{
     private int volume;
     private int channel;
 
+    public Radio(boolean on, int volume, int channel) {
+        this.on = on;
+        this.volume = volume;
+        this.channel = channel;
+    }
+
     @Override
     public boolean isEnabled() {
         return on;
