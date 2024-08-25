@@ -44,4 +44,14 @@ public class TV implements Device{
     public void setChannel(int channel) {
         this.channel = channel;
     }
+
+    @Override
+    public void printStatus() {
+        System.out.println("--------------------------");
+        System.out.println("| Io sono un radio ");
+        System.out.println(STR."| Io sono \{(on ? "collegato" : "spento")}");
+        System.out.println(STR."| Volume corrente è \{volume}");
+        System.out.println(STR."| Canale corrente è \{channel}");
+        System.out.println("--------------------------");
+    }
 }
