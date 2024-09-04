@@ -1,3 +1,5 @@
+import strategies.PayStrategy;
+
 public class Order {
     private int totalCost = 0;
     private boolean isClosed = false;
