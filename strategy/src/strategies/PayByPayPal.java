@@ -1,3 +1,5 @@
+package strategies;
+
 import model.CreditCard;
 
 import java.io.BufferedReader;
