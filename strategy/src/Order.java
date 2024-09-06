@@ -20,7 +20,7 @@ public class Order {
         return isClosed;
     }
 
-    public void setClosed(boolean closed) {
-        isClosed = closed;
+    public void setClosed() {
+        isClosed = true;
     }
 }
