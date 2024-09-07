@@ -12,7 +12,7 @@ import static java.lang.StringTemplate.STR;
 
 public class PayByPayPal implements PayStrategy {
     private static Map<String, String> db = new HashMap<>();
-    private Boolean signedIn;
+    private Boolean signedIn = false;
     private final BufferedReader  READER = new BufferedReader(new InputStreamReader(System.in));
     private CreditCard card;
     private String email;
