@@ -1,6 +1,7 @@
 import strategies.PayByCreditCard;
 import strategies.PayByPayPal;
 import strategies.PayStrategy;
+import strategies.StragegyEnum;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -13,6 +14,8 @@ public class Demo {
     private static BufferedReader READER = new BufferedReader(new InputStreamReader(System.in));
     private static Order order = new Order();
     private static PayStrategy strategy;
+
+    private static String PAY = "P";
 
     static{
         priceOnProducts.put(1, 2200);
@@ -41,17 +44,16 @@ public class Demo {
                     System.out.println("Por favor, selecione um método de pagamento: \n 1- Pay Pal\n 2- Credit card");
                     String paymentMethod = READER.readLine();
 
-                    strategy = paymentMethod.equals("1") ? new PayByPayPal() : new PayByCreditCard();
+                    strategy = paymentMethod.equals(StragegyEnum.PAYPAL) ? new PayByPayPal() : new PayByCreditCard();
 
                     order.processOrder(strategy);
 
                     System.out.println(STR."Pagar \{order.getTotalCost()} R$ ou continuar comprando? P/C: ");
                     String proceed = READER.readLine();
 
-                    if(proceed.equals("P")){
-                        System.out.println(strategy.pay(
-                                order.getTotalCost()) ? "Pagamento realizado com sucesso" : "Falha, por favor cheque seus dados.");
-                    }
+                    if(proceed.equals(PAY))
+                        System.out.println(strategy.pay(order.getTotalCost()) ? "Pagamento realizado com sucesso" : "Falha, por favor cheque seus dados.");
+
                     order.setClosed();
                 }
             }
